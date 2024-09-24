@@ -70,7 +70,6 @@ public class PointServiceTest {
         // 조회한 포인트에 충전하려하는 포인트를 더하여 insert 진행
         UserPoint afterUserPoint = userPointTable.insertOrUpdate(userId, defaultUserPoint.point() + amount);
         // 포인트 충전 후 이력 추가
-//        pointHistoryTable.insert(userId, amount, TransactionType.CHARGE , System.currentTimeMillis());
         // then
         // defaultUserPoint 의 초기 포인트는 0으로 시작하였기 때문에 충전할 포인트와 같은지 비교
         assertEquals(amount,afterUserPoint.point());
